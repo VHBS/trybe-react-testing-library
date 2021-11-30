@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 import App from '../App';
 import renderWithRouter from '../renderWithRouter';
 import pokemons from '../data';
-// import { Pokedex } from '../components';
 
 describe('Requisito - 5. Teste o componente Pokedex.js', () => {
   const pokeName = 'pokemon-name';
