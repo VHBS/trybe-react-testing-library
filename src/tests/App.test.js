@@ -5,7 +5,8 @@ import App from '../App';
 import renderWithRouter from '../renderWithRouter';
 
 describe('Requisito 1 - Testa o componente App.js', () => {
-  it('Testa se o primeiro link possui o texto Home', () => {
+  it(`1.1.1 - Testa se o primeiro link possui o texto Home 
+  && 1.2 - Se é redirecionado para sua URL`, () => {
     const { history } = renderWithRouter(<App />);
     const buttonHome = screen.getByRole('link', {
       name: /home/i });
@@ -15,7 +16,8 @@ describe('Requisito 1 - Testa o componente App.js', () => {
     expect(history.location.pathname).toBe('/');
   });
 
-  it('Testa se o primeiro link possui o texto About', () => {
+  it(`1.1.2 - O segundo link deve possuir o texto About
+  && 1.3 - Se é redirecionado para sua URL`, () => {
     const { history } = renderWithRouter(<App />);
     const buttonAbout = screen.getByRole('link', {
       name: /about/i });
@@ -25,7 +27,8 @@ describe('Requisito 1 - Testa o componente App.js', () => {
     expect(history.location.pathname).toBe('/about');
   });
 
-  it('Testa se o primeiro link possui o texto Favorite Pokémons', () => {
+  it(`1.1.3 - O terceiro link deve possuir o texto Favorite Pokémons
+  && 1.4 - Se é redirecionado para sua URL`, () => {
     const { history } = renderWithRouter(<App />);
     const buttonFavoritePokémons = screen.getByRole('link', {
       name: /favorite pokémons/i });
@@ -35,7 +38,8 @@ describe('Requisito 1 - Testa o componente App.js', () => {
     expect(history.location.pathname).toBe('/favorites');
   });
 
-  it('Testa se o primeiro link possui o texto NotFound', () => {
+  it(`1.5 - Teste se a aplicação é redirecionada para a página 
+  Not Found ao entrar em uma URL desconhecida.`, () => {
     const { history } = renderWithRouter(<App />);
     history.push('/blablabla');
 

@@ -4,7 +4,7 @@ import App from '../App';
 import renderWithRouter from '../renderWithRouter';
 
 describe('Requisito 4 - Teste o componente NotFound.js', () => {
-  it(`Teste se página contém um heading h2 com o texto 
+  it(`4.1 - Teste se página contém um heading h2 com o texto 
   Page requested not found 😭`, () => {
     const { history } = renderWithRouter(<App />);
     history.push('/trybe');
@@ -15,7 +15,7 @@ describe('Requisito 4 - Teste o componente NotFound.js', () => {
     expect(text).toBeInTheDocument();
   });
 
-  it(`Teste se página mostra a imagem 
+  it(`4.2 - Teste se página mostra a imagem 
   https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif`, () => {
     const { history } = renderWithRouter(<App />);
     history.push('/trybe');
